@@ -31,6 +31,14 @@ namespace Inventory_Hall
         {
             agrproducto agrproducto = new agrproducto();
             agrproducto.Show();
+
+
+        }
+
+        private void eMPLEADOToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            agrempleado agrempleado = new agrempleado();
+            agrempleado.Show();
         }
     }
 }

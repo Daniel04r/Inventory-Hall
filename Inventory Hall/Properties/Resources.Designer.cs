@@ -89,5 +89,45 @@ namespace Inventory_Hall.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Dark_Violet_Purple_User_Interface_Login_Mobile_Prototipe__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Blue Dark Violet Purple User Interface Login Mobile Prototipe (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Dark_Violet_Purple_User_Interface_Login_Mobile_Prototipe__3_ {
+            get {
+                object obj = ResourceManager.GetObject("Blue Dark Violet Purple User Interface Login Mobile Prototipe (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Dark_Violet_Purple_User_Interface_Login_Mobile_Prototipe__4_ {
+            get {
+                object obj = ResourceManager.GetObject("Blue Dark Violet Purple User Interface Login Mobile Prototipe (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Blue_Dark_Violet_Purple_User_Interface_Login_Mobile_Prototipe__5_ {
+            get {
+                object obj = ResourceManager.GetObject("Blue Dark Violet Purple User Interface Login Mobile Prototipe (5)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

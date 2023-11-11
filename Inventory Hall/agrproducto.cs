@@ -10,11 +10,40 @@ using System.Windows.Forms;
 
 namespace Inventory_Hall
 {
+
     public partial class agrproducto : Form
     {
-        public agrproducto()
+
+
+
+        private void agrproducto_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+
+        }
+
+        private void txtcategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidsuplidor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnnuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+
+
+
+        

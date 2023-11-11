@@ -16,6 +16,7 @@ namespace Inventory_Hall
         public frmloggin()
         {
             InitializeComponent();
+
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -25,12 +26,15 @@ namespace Inventory_Hall
 
         private void btnloggin_Click(object sender, EventArgs e)
         {
+
             if (txtUsuario.Text == "jhondaniel" && mtxtcontrasena.Text == "jhondaniel")
             {
+
+                //frmloggin.ActiveForm.Close(); 
                 principal principal = new principal();
                 principal.Show();
                 MessageBox.Show("Bienvenido al Sistema Inventory Hall");
-                
+                this.Hide();
 
             }
             else
@@ -50,7 +54,14 @@ namespace Inventory_Hall
             }
 
 
-        
+
+        }
+
+        private void frmloggin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
+
