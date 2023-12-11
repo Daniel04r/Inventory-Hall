@@ -176,6 +176,7 @@ namespace Inventory_Hall
 
                             command.ExecuteNonQuery();
                         }
+                        //a
 
                         MessageBox.Show("Data insertada correctamente.");
 
