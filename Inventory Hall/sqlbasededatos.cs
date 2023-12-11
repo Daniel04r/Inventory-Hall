@@ -6,13 +6,12 @@ namespace Inventory_Hall
 {
     public class BaseDeDatos : IDisposable
     {
-        private SqlConnection connection;
+        private readonly SqlConnection connection;
 
         public BaseDeDatos()
         {
             string connectionString = "Data Source=MSI\\SQLEXPRESS;Initial Catalog=inventoryhall;Integrated Security=True";
             connection = new SqlConnection(connectionString);
-            
         }
 
         public SqlConnection ObtenerConexion()
@@ -25,9 +24,9 @@ namespace Inventory_Hall
                 }
                 return connection;
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                // Manejar la excepción de manera adecuada (por ejemplo, log, mostrar mensaje, etc.).
+                // Manejar la excepción de manera adecuada.
                 throw new Exception("Error al abrir la conexión.", ex);
             }
         }
@@ -41,9 +40,9 @@ namespace Inventory_Hall
                     connection.Close();
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                // Manejar la excepción de manera adecuada (por ejemplo, log, mostrar mensaje, etc.).
+                // Manejar la excepción de manera adecuada.
                 throw new Exception("Error al cerrar la conexión.", ex);
             }
         }
@@ -62,9 +61,9 @@ namespace Inventory_Hall
                     command.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                // Manejar la excepción de manera adecuada (por ejemplo, log, mostrar mensaje, etc.).
+                // Manejar la excepción de manera adecuada.
                 throw new Exception("Error al ejecutar la consulta.", ex);
             }
             finally

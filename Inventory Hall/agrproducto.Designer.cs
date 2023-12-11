@@ -139,9 +139,11 @@
             // 
             // txtcategoria
             // 
+            txtcategoria.BackColor = SystemColors.ButtonHighlight;
             txtcategoria.DropDownStyle = ComboBoxStyle.DropDownList;
+            txtcategoria.Enabled = false;
             txtcategoria.FormattingEnabled = true;
-            txtcategoria.Location = new Point(119, 118);
+            txtcategoria.Location = new Point(119, 113);
             txtcategoria.Name = "txtcategoria";
             txtcategoria.Size = new Size(151, 28);
             txtcategoria.TabIndex = 13;

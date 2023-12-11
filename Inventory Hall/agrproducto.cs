@@ -13,6 +13,7 @@ using System.Windows.Forms;
 namespace Inventory_Hall
 {
 
+
     public partial class agrproducto : Form
     {
         private BaseDeDatos basededatos;
@@ -21,24 +22,10 @@ namespace Inventory_Hall
             InitializeComponent();
 
             basededatos = new BaseDeDatos();
+            cargar_categoria();
+            cargar_idsuplidor();
 
         }
-
-
-
-        private void Llenarcategoria()
-        {
-            txtcategoria.Items.Clear();
-
-            string consulta = "SELECT id, tipo FROM categoria";
-
-
-
-        }
-
-
-
-
 
         private void agrproducto_Load(object sender, EventArgs e)
         {
@@ -58,10 +45,73 @@ namespace Inventory_Hall
 
         }
 
+        private void cargar_categoria()
+        {
+
+            // Utilizar un Dictionary para evitar duplicados
+            Dictionary<string, bool> categoriasDic = new Dictionary<string, bool>();
+
+            string query = "SELECT id, tipo FROM categoria";
+
+            using (SqlCommand command = new SqlCommand(query, basededatos.ObtenerConexion()))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string id = reader["id"].ToString();
+                        string tipo = reader["tipo"].ToString();
+                        string displayText = $"{id} - {tipo}";
+
+                        // Agregar el elemento solo si no existe previamente en el Dictionary
+                        if (!categoriasDic.ContainsKey(displayText))
+                        {
+                            categoriasDic.Add(displayText, true);
+                            txtcategoria.Items.Add(displayText);
+
+                        }
+                    }
+                }
+            }
+        }
+
+        private void cargar_idsuplidor()
+        {
+            // Limpiar los elementos existentes en el ComboBox antes de cargar nuevamente
+            txtidsuplidor.Items.Clear();
+
+            // Utilizar un Dictionary para evitar duplicados
+            Dictionary<string, bool> idsuplidorDic = new Dictionary<string, bool>();
+
+            string query = "SELECT id, rnc FROM suplidor";
+
+            using (SqlCommand command = new SqlCommand(query, basededatos.ObtenerConexion()))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+
+                        string id = reader["id"].ToString();
+                        string displayText = $"{id}";
+
+                        // Agregar el elemento solo si no existe previamente en el Dictionary
+                        if (!idsuplidorDic.ContainsKey(displayText))
+                        {
+                            idsuplidorDic.Add(displayText, true);
+                            txtidsuplidor.Items.Add(displayText);
+                        }
+                    }
+                }
+            }
+        }
+
         private void txtcategoria_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+
         }
+
 
         private void txtidsuplidor_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -88,54 +138,56 @@ namespace Inventory_Hall
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
-            string InsertarConsulta = "INSERT INTO producto (nombre, categoria, descripcion, stock, idsuplidor, seccion) " +
-                    "VALUES (@nombre, @categoria, @descripcion, @stock, @idsuplidor, @seccion)";
-
-            if (string.IsNullOrWhiteSpace(txtnombre.Text) ||
-                    txtcategoria.SelectedItem == null ||
-                    string.IsNullOrWhiteSpace(txtdescripcion.Text) ||
-                    string.IsNullOrWhiteSpace(txtstock.Text) ||
-                    txtidsuplidor.SelectedItem == null ||
-                    string.IsNullOrWhiteSpace(txtseccion.Text))
             {
-                MessageBox.Show("Debes completar Todos los campos.");
-                return;
-            }
-
-            try
-            {
-                using (BaseDeDatos baseDeDatos = new BaseDeDatos())
+                try
                 {
-                    baseDeDatos.ObtenerConexion();
+                    string InsertarConsulta = "INSERT INTO producto (nombre, categoria, descripcion, stock, idsuplidor, seccion) " +
+                        "VALUES (@nombre, @categoria, @descripcion, @stock, @idsuplidor, @seccion)";
 
-                    using (SqlCommand command = new SqlCommand(InsertarConsulta, baseDeDatos.ObtenerConexion()))
+                    if (string.IsNullOrWhiteSpace(txtnombre.Text) ||
+                        txtcategoria.SelectedItem == null ||
+                        string.IsNullOrWhiteSpace(txtdescripcion.Text) ||
+                        string.IsNullOrWhiteSpace(txtstock.Text) ||
+                        txtidsuplidor.SelectedItem == null ||
+                        string.IsNullOrWhiteSpace(txtseccion.Text))
                     {
-                        // Asignar valores a los parámetros
-                        command.Parameters.AddWithValue("@nombre", txtnombre.Text);
-                        command.Parameters.AddWithValue("@categoria", Convert.ToInt32(txtcategoria.SelectedValue));
-                        command.Parameters.AddWithValue("@descripcion", txtdescripcion.Text);
-                        command.Parameters.AddWithValue("@stock", Convert.ToInt32(txtstock.Text));
-                        command.Parameters.AddWithValue("@idsuplidor", Convert.ToInt32(txtidsuplidor.SelectedValue));
-                        command.Parameters.AddWithValue("@seccion", txtseccion.Text);
+                        MessageBox.Show("Debes completar todos los campos.");
+                        return;
+                    }
 
-                        // Ejecutar la consulta
-                        int rowsAffected = command.ExecuteNonQuery();
+                    if (!int.TryParse(txtstock.Text, out _))
+                    {
+                        MessageBox.Show("Favor introduzca un dato numérico en el campo Stock.");
+                        return;
+                    }
 
-                        // Verificar si la inserción fue exitosa
-                        if (rowsAffected > 0)
+                    using (BaseDeDatos baseDeDatos = new BaseDeDatos())
+                    {
+                        baseDeDatos.ObtenerConexion();
+
+                        using (SqlCommand command = new SqlCommand(InsertarConsulta, baseDeDatos.ObtenerConexion()))
                         {
-                            MessageBox.Show("Inserción exitosa");
+                            command.Parameters.AddWithValue("@nombre", txtnombre.Text);
+                            command.Parameters.AddWithValue("@categoria", txtcategoria.SelectedItem.ToString().Split(new[] { " - " }, StringSplitOptions.None)[0]);
+                            command.Parameters.AddWithValue("@descripcion", txtdescripcion.Text);
+                            command.Parameters.AddWithValue("@stock", txtstock.Text);
+                            command.Parameters.AddWithValue("@idsuplidor", txtidsuplidor.SelectedItem.ToString().Split(new[] { " - " }, StringSplitOptions.None)[0]);
+                            command.Parameters.AddWithValue("@seccion", txtseccion.Text);
+
+                            command.ExecuteNonQuery();
                         }
-                        else
-                        {
-                            MessageBox.Show("La inserción no se realizó");
-                        }
+
+                        MessageBox.Show("Data insertada correctamente.");
+
+                        txtcategoria.SelectedIndex = txtidsuplidor.SelectedIndex = -1;
+
+                        txtnombre.Text = txtdescripcion.Text = txtstock.Text = txtseccion.Text = "";
                     }
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message);
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR: " + ex.Message);
+                }
             }
         }
     }
@@ -144,4 +196,4 @@ namespace Inventory_Hall
 
 
 
-        
+
