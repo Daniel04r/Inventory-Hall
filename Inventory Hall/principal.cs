@@ -40,5 +40,13 @@ namespace Inventory_Hall
             agrempleado agrempleado = new agrempleado();
             agrempleado.Show();
         }
+
+        private void sUToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            {
+                agrsuplidor agrsuplidor = new agrsuplidor ();
+                agrsuplidor.Show();
+            }
+        }
     }
 }

@@ -38,11 +38,11 @@
             dISTRIBUCIÓNDEARTICULOSToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             cONSULTASToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             pRODUCTOToolStripMenuItem2 = new FontAwesome.Sharp.IconMenuItem();
-            sISTEMAToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
-            pictureBox1 = new PictureBox();
             eMPLEADOToolStripMenuItem1 = new FontAwesome.Sharp.IconMenuItem();
             sUPLIDORToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            sISTEMAToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
             aCERCADEToolStripMenuItem = new FontAwesome.Sharp.IconMenuItem();
+            pictureBox1 = new PictureBox();
             menuStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -98,7 +98,7 @@
             pRODUCTOToolStripMenuItem.IconColor = Color.Black;
             pRODUCTOToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             pRODUCTOToolStripMenuItem.Name = "pRODUCTOToolStripMenuItem";
-            pRODUCTOToolStripMenuItem.Size = new Size(168, 26);
+            pRODUCTOToolStripMenuItem.Size = new Size(224, 26);
             pRODUCTOToolStripMenuItem.Text = "PRODUCTO";
             pRODUCTOToolStripMenuItem.Click += pRODUCTOToolStripMenuItem_Click;
             // 
@@ -109,7 +109,7 @@
             eMPLEADOToolStripMenuItem.IconColor = Color.Black;
             eMPLEADOToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             eMPLEADOToolStripMenuItem.Name = "eMPLEADOToolStripMenuItem";
-            eMPLEADOToolStripMenuItem.Size = new Size(168, 26);
+            eMPLEADOToolStripMenuItem.Size = new Size(224, 26);
             eMPLEADOToolStripMenuItem.Text = "EMPLEADO";
             eMPLEADOToolStripMenuItem.Click += eMPLEADOToolStripMenuItem_Click;
             // 
@@ -120,8 +120,9 @@
             sUToolStripMenuItem.IconColor = Color.Black;
             sUToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             sUToolStripMenuItem.Name = "sUToolStripMenuItem";
-            sUToolStripMenuItem.Size = new Size(168, 26);
+            sUToolStripMenuItem.Size = new Size(224, 26);
             sUToolStripMenuItem.Text = "SUPLIDOR";
+            sUToolStripMenuItem.Click += sUToolStripMenuItem_Click;
             // 
             // pRODUCTOToolStripMenuItem1
             // 
@@ -164,8 +165,28 @@
             pRODUCTOToolStripMenuItem2.IconColor = Color.Black;
             pRODUCTOToolStripMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             pRODUCTOToolStripMenuItem2.Name = "pRODUCTOToolStripMenuItem2";
-            pRODUCTOToolStripMenuItem2.Size = new Size(224, 26);
+            pRODUCTOToolStripMenuItem2.Size = new Size(172, 26);
             pRODUCTOToolStripMenuItem2.Text = "PRODUCTO ";
+            // 
+            // eMPLEADOToolStripMenuItem1
+            // 
+            eMPLEADOToolStripMenuItem1.BackColor = Color.Yellow;
+            eMPLEADOToolStripMenuItem1.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            eMPLEADOToolStripMenuItem1.IconColor = Color.Black;
+            eMPLEADOToolStripMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            eMPLEADOToolStripMenuItem1.Name = "eMPLEADOToolStripMenuItem1";
+            eMPLEADOToolStripMenuItem1.Size = new Size(172, 26);
+            eMPLEADOToolStripMenuItem1.Text = "EMPLEADO";
+            // 
+            // sUPLIDORToolStripMenuItem
+            // 
+            sUPLIDORToolStripMenuItem.BackColor = Color.Yellow;
+            sUPLIDORToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.Truck;
+            sUPLIDORToolStripMenuItem.IconColor = Color.Black;
+            sUPLIDORToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            sUPLIDORToolStripMenuItem.Name = "sUPLIDORToolStripMenuItem";
+            sUPLIDORToolStripMenuItem.Size = new Size(172, 26);
+            sUPLIDORToolStripMenuItem.Text = "SUPLIDOR";
             // 
             // sISTEMAToolStripMenuItem
             // 
@@ -178,6 +199,16 @@
             sISTEMAToolStripMenuItem.Size = new Size(134, 52);
             sISTEMAToolStripMenuItem.Text = "SISTEMA ";
             // 
+            // aCERCADEToolStripMenuItem
+            // 
+            aCERCADEToolStripMenuItem.BackColor = Color.Red;
+            aCERCADEToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            aCERCADEToolStripMenuItem.IconColor = Color.Black;
+            aCERCADEToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
+            aCERCADEToolStripMenuItem.Size = new Size(174, 26);
+            aCERCADEToolStripMenuItem.Text = "ACERCA DE ";
+            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Nueva;
@@ -186,36 +217,6 @@
             pictureBox1.Size = new Size(1096, 936);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            // 
-            // eMPLEADOToolStripMenuItem1
-            // 
-            eMPLEADOToolStripMenuItem1.BackColor = Color.Yellow;
-            eMPLEADOToolStripMenuItem1.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
-            eMPLEADOToolStripMenuItem1.IconColor = Color.Black;
-            eMPLEADOToolStripMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            eMPLEADOToolStripMenuItem1.Name = "eMPLEADOToolStripMenuItem1";
-            eMPLEADOToolStripMenuItem1.Size = new Size(224, 26);
-            eMPLEADOToolStripMenuItem1.Text = "EMPLEADO";
-            // 
-            // sUPLIDORToolStripMenuItem
-            // 
-            sUPLIDORToolStripMenuItem.BackColor = Color.Yellow;
-            sUPLIDORToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.Truck;
-            sUPLIDORToolStripMenuItem.IconColor = Color.Black;
-            sUPLIDORToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            sUPLIDORToolStripMenuItem.Name = "sUPLIDORToolStripMenuItem";
-            sUPLIDORToolStripMenuItem.Size = new Size(224, 26);
-            sUPLIDORToolStripMenuItem.Text = "SUPLIDOR";
-            // 
-            // aCERCADEToolStripMenuItem
-            // 
-            aCERCADEToolStripMenuItem.BackColor = Color.Red;
-            aCERCADEToolStripMenuItem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            aCERCADEToolStripMenuItem.IconColor = Color.Black;
-            aCERCADEToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
-            aCERCADEToolStripMenuItem.Size = new Size(224, 26);
-            aCERCADEToolStripMenuItem.Text = "ACERCA DE ";
             // 
             // principal
             // 
