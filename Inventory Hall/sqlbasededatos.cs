@@ -72,6 +72,7 @@ namespace Inventory_Hall
             }
         }
 
+
         public void Dispose()
         {
             CerrarConexion();

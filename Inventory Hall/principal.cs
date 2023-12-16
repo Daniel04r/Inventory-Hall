@@ -60,5 +60,17 @@ namespace Inventory_Hall
             consultaproducto consultaproducto = new consultaproducto();
             consultaproducto.Show();
         }
+
+        private void eMPLEADOToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            consultaempleado consultaempleado = new consultaempleado();
+            consultaempleado.Show();
+        }
+
+        private void sUPLIDORToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Consultasuplidor consultasuplidor = new Consultasuplidor();
+            consultasuplidor.Show();
+        }
     }
 }

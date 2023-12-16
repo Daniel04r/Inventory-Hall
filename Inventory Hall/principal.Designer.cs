@@ -179,6 +179,7 @@
             eMPLEADOToolStripMenuItem1.Name = "eMPLEADOToolStripMenuItem1";
             eMPLEADOToolStripMenuItem1.Size = new Size(224, 26);
             eMPLEADOToolStripMenuItem1.Text = "EMPLEADO";
+            eMPLEADOToolStripMenuItem1.Click += eMPLEADOToolStripMenuItem1_Click;
             // 
             // sUPLIDORToolStripMenuItem
             // 
@@ -189,6 +190,7 @@
             sUPLIDORToolStripMenuItem.Name = "sUPLIDORToolStripMenuItem";
             sUPLIDORToolStripMenuItem.Size = new Size(224, 26);
             sUPLIDORToolStripMenuItem.Text = "SUPLIDOR";
+            sUPLIDORToolStripMenuItem.Click += sUPLIDORToolStripMenuItem_Click;
             // 
             // sISTEMAToolStripMenuItem
             // 
