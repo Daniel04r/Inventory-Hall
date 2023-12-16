@@ -43,7 +43,7 @@
             dataGridempleado.Name = "dataGridempleado";
             dataGridempleado.RowHeadersWidth = 51;
             dataGridempleado.RowTemplate.Height = 29;
-            dataGridempleado.Size = new Size(1131, 346);
+            dataGridempleado.Size = new Size(1164, 346);
             dataGridempleado.TabIndex = 0;
             // 
             // btnbuscar
@@ -84,29 +84,31 @@
             // 
             txtempleado.Location = new Point(130, 400);
             txtempleado.Name = "txtempleado";
-            txtempleado.Size = new Size(125, 27);
+            txtempleado.Size = new Size(134, 27);
             txtempleado.TabIndex = 3;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(124, 377);
+            label1.Location = new Point(130, 377);
             label1.Name = "label1";
-            label1.Size = new Size(131, 20);
+            label1.Size = new Size(134, 20);
             label1.TabIndex = 4;
-            label1.Text = "Inserte Empleado";
+            label1.Text = "Ingrese Empleado";
             // 
             // consultaempleado
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1155, 450);
+            ClientSize = new Size(1188, 450);
             Controls.Add(label1);
             Controls.Add(txtempleado);
             Controls.Add(btnrefresh);
             Controls.Add(btnbuscar);
             Controls.Add(dataGridempleado);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "consultaempleado";
             Text = "consultaempleado";
             Load += consultaempleado_Load;

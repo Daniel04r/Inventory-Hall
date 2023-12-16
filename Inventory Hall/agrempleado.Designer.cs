@@ -244,6 +244,8 @@
             Controls.Add(txtdireccion);
             Controls.Add(txtapellido);
             Controls.Add(txtnombre);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "agrempleado";
             Text = "Registrar empleado";
             Load += agrempleado_Load;

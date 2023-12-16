@@ -130,6 +130,7 @@ namespace Inventory_Hall
         private void consultaempleado_Load(object sender, EventArgs e)
         {
             CargarEmpleados();
+            this.TopMost = true;
         }
 
         private void btnbuscar_Click(object sender, EventArgs e)

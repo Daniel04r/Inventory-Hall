@@ -32,6 +32,7 @@
             btnbuscar = new FontAwesome.Sharp.IconButton();
             btnrefresh = new FontAwesome.Sharp.IconButton();
             txtID = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridproducto).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             dataGridproducto.Name = "dataGridproducto";
             dataGridproducto.RowHeadersWidth = 51;
             dataGridproducto.RowTemplate.Height = 29;
-            dataGridproducto.Size = new Size(1044, 371);
+            dataGridproducto.Size = new Size(896, 371);
             dataGridproducto.TabIndex = 0;
             // 
             // btnbuscar
@@ -86,15 +87,28 @@
             txtID.Size = new Size(125, 27);
             txtID.TabIndex = 3;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(186, 423);
+            label1.Name = "label1";
+            label1.Size = new Size(81, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Ingrese ID";
+            // 
             // consultaproducto
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1065, 496);
+            ClientSize = new Size(922, 496);
+            Controls.Add(label1);
             Controls.Add(txtID);
             Controls.Add(btnrefresh);
             Controls.Add(btnbuscar);
             Controls.Add(dataGridproducto);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "consultaproducto";
             Text = "consultaproducto";
             Load += consultaproducto_Load;
@@ -109,5 +123,6 @@
         private FontAwesome.Sharp.IconButton btnbuscar;
         private FontAwesome.Sharp.IconButton btnrefresh;
         private TextBox txtID;
+        private Label label1;
     }
 }

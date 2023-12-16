@@ -133,6 +133,7 @@ namespace Inventory_Hall
         private void consultaproducto_Load(object sender, EventArgs e)
         {
             CargarProductos();
+            this.TopMost = true;
         }
     }
 }

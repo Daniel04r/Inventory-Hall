@@ -47,6 +47,7 @@ namespace Inventory_Hall
 
         private void agrsuplidor_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
             {
                 txtnombre.Enabled = false;
                 txtemail.Enabled = false;

@@ -219,6 +219,8 @@
             Controls.Add(txtdescripcion);
             Controls.Add(txtnombre);
             Controls.Add(ingresarproducto);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "agrproducto";
             Text = "Entrada de producto";
             Load += agrproducto_Load;

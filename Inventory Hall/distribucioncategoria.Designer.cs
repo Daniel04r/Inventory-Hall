@@ -109,6 +109,8 @@
             Controls.Add(nuevasesion);
             Controls.Add(comboBoxIDcategoria);
             Controls.Add(datagridcategoria);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "distribucioncategoria";
             Text = "distribucioncategoria";
             Load += distribucioncategoria_Load;

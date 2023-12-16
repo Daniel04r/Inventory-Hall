@@ -19,10 +19,14 @@ namespace Inventory_Hall
         {
             InitializeComponent();
 
+          
+
         }
 
         private void agrempleado_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+
             txtnombre.Enabled = false;
             txtapellido.Enabled = false;
             txtdireccion.Enabled = false;
@@ -137,7 +141,7 @@ namespace Inventory_Hall
         }
     }
 }
-            
-        
-    
+
+
+
 

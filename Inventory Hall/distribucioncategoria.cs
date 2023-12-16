@@ -22,6 +22,7 @@ namespace Inventory_Hall
 
         private void distribucioncategoria_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
             {
                 // Abrir la conexión a la base de datos
                 connection = dbManager.ObtenerConexion();
@@ -79,10 +80,10 @@ namespace Inventory_Hall
         {
             // Puedes realizar acciones adicionales si es necesario
         }
-    
 
 
-private void btnactualizar_Click(object sender, EventArgs e)
+
+        private void btnactualizar_Click(object sender, EventArgs e)
         {
             {
                 if (comboBoxIDcategoria.SelectedItem != null)

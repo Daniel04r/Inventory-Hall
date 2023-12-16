@@ -17,8 +17,10 @@ namespace Inventory_Hall
         {
             InitializeComponent();
 
-        }
+            
 
+        }
+        
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Close(); //Esto es para cerrar el programa.
@@ -34,7 +36,10 @@ namespace Inventory_Hall
                 principal principal = new principal();
                 principal.Show();
                 MessageBox.Show("Bienvenido al Sistema Inventory Hall");
+
+                // Cierra solo el formulario actual (frmloggin)
                 this.Hide();
+               
 
             }
             else
@@ -59,7 +64,7 @@ namespace Inventory_Hall
 
         private void frmloggin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

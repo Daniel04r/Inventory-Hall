@@ -201,6 +201,8 @@
             Controls.Add(txtdescripcion);
             Controls.Add(btnnuevo3);
             Controls.Add(btnguardar3);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "agrsuplidor";
             Text = "agrsuplidor";
             Load += agrsuplidor_Load;

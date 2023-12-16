@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace Inventory_Hall
 {
     public partial class principal : Form
@@ -19,7 +21,9 @@ namespace Inventory_Hall
 
         private void btncerrar_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            // Cerrar la aplicación y detener la depuración
+            Environment.Exit(0);
+
         }
 
         private void eNTRADAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,6 +75,17 @@ namespace Inventory_Hall
         {
             Consultasuplidor consultasuplidor = new Consultasuplidor();
             consultasuplidor.Show();
+        }
+
+        private void aCERCADEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ultimoacerca2 ultimoacerca2 = new ultimoacerca2();
+            ultimoacerca2.Show();
+        }
+
+        private void aCERCADEToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

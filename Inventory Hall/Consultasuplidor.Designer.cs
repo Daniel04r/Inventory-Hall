@@ -32,6 +32,7 @@
             btnbuscar = new FontAwesome.Sharp.IconButton();
             btnrefresh = new FontAwesome.Sharp.IconButton();
             txtidsuplidor = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGrididsuplidor).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             dataGrididsuplidor.Name = "dataGrididsuplidor";
             dataGrididsuplidor.RowHeadersWidth = 51;
             dataGrididsuplidor.RowTemplate.Height = 29;
-            dataGrididsuplidor.Size = new Size(1126, 334);
+            dataGrididsuplidor.Size = new Size(949, 334);
             dataGrididsuplidor.TabIndex = 0;
             // 
             // btnbuscar
@@ -53,7 +54,7 @@
             btnbuscar.IconColor = Color.White;
             btnbuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnbuscar.IconSize = 20;
-            btnbuscar.Location = new Point(566, 396);
+            btnbuscar.Location = new Point(376, 392);
             btnbuscar.Name = "btnbuscar";
             btnbuscar.Size = new Size(111, 29);
             btnbuscar.TabIndex = 1;
@@ -71,7 +72,7 @@
             btnrefresh.IconColor = Color.White;
             btnrefresh.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnrefresh.IconSize = 20;
-            btnrefresh.Location = new Point(704, 397);
+            btnrefresh.Location = new Point(517, 392);
             btnrefresh.Name = "btnrefresh";
             btnrefresh.Size = new Size(107, 28);
             btnrefresh.TabIndex = 2;
@@ -82,20 +83,33 @@
             // 
             // txtidsuplidor
             // 
-            txtidsuplidor.Location = new Point(142, 394);
+            txtidsuplidor.Location = new Point(133, 394);
             txtidsuplidor.Name = "txtidsuplidor";
             txtidsuplidor.Size = new Size(125, 27);
             txtidsuplidor.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(133, 371);
+            label1.Name = "label1";
+            label1.Size = new Size(122, 20);
+            label1.TabIndex = 4;
+            label1.Text = "Ingrese suplidor";
             // 
             // Consultasuplidor
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1150, 450);
+            ClientSize = new Size(971, 450);
+            Controls.Add(label1);
             Controls.Add(txtidsuplidor);
             Controls.Add(btnrefresh);
             Controls.Add(btnbuscar);
             Controls.Add(dataGrididsuplidor);
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Consultasuplidor";
             Text = "Consultasuplidor";
             Load += Consultasuplidor_Load;
@@ -110,5 +124,6 @@
         private FontAwesome.Sharp.IconButton btnbuscar;
         private FontAwesome.Sharp.IconButton btnrefresh;
         private TextBox txtidsuplidor;
+        private Label label1;
     }
 }

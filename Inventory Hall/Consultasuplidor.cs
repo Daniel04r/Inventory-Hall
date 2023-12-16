@@ -20,7 +20,7 @@ namespace Inventory_Hall
             InitializeComponent();
             baseDeDatos = new BaseDeDatos();
         }
-       
+
         private void RealizarBusqueda()
         {
             try
@@ -117,6 +117,7 @@ namespace Inventory_Hall
 
         private void Consultasuplidor_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
             CargarProveedores();
         }
 

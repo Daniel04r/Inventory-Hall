@@ -29,6 +29,8 @@ namespace Inventory_Hall
 
         private void agrproducto_Load(object sender, EventArgs e)
         {
+            this.TopMost = true;
+
             txtnombre.Enabled = false;
             txtcategoria.Enabled = false;
             txtdescripcion.Enabled = false;
@@ -176,7 +178,7 @@ namespace Inventory_Hall
 
                             command.ExecuteNonQuery();
                         }
-                        
+
 
                         MessageBox.Show("Data insertada correctamente.");
 

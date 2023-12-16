@@ -55,7 +55,7 @@
             btncerrar.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btncerrar.Image = Properties.Resources._330399_bad_cancel_clear_close_decline_icon;
             btncerrar.ImageAlign = ContentAlignment.TopCenter;
-            btncerrar.Location = new Point(1156, 174);
+            btncerrar.Location = new Point(1422, 174);
             btncerrar.Name = "btncerrar";
             btncerrar.Size = new Size(78, 73);
             btncerrar.TabIndex = 0;
@@ -71,7 +71,7 @@
             menuStrip2.Dock = DockStyle.None;
             menuStrip2.ImageScalingSize = new Size(20, 20);
             menuStrip2.Items.AddRange(new ToolStripItem[] { eNTRADAToolStripMenuItem, pRODUCTOToolStripMenuItem1, cONSULTASToolStripMenuItem, sISTEMAToolStripMenuItem });
-            menuStrip2.Location = new Point(221, -2);
+            menuStrip2.Location = new Point(354, -2);
             menuStrip2.Name = "menuStrip2";
             menuStrip2.RightToLeft = RightToLeft.No;
             menuStrip2.Size = new Size(728, 56);
@@ -166,7 +166,7 @@
             pRODUCTOToolStripMenuItem2.IconColor = Color.Black;
             pRODUCTOToolStripMenuItem2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             pRODUCTOToolStripMenuItem2.Name = "pRODUCTOToolStripMenuItem2";
-            pRODUCTOToolStripMenuItem2.Size = new Size(224, 26);
+            pRODUCTOToolStripMenuItem2.Size = new Size(172, 26);
             pRODUCTOToolStripMenuItem2.Text = "PRODUCTO ";
             pRODUCTOToolStripMenuItem2.Click += pRODUCTOToolStripMenuItem2_Click;
             // 
@@ -177,7 +177,7 @@
             eMPLEADOToolStripMenuItem1.IconColor = Color.Black;
             eMPLEADOToolStripMenuItem1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             eMPLEADOToolStripMenuItem1.Name = "eMPLEADOToolStripMenuItem1";
-            eMPLEADOToolStripMenuItem1.Size = new Size(224, 26);
+            eMPLEADOToolStripMenuItem1.Size = new Size(172, 26);
             eMPLEADOToolStripMenuItem1.Text = "EMPLEADO";
             eMPLEADOToolStripMenuItem1.Click += eMPLEADOToolStripMenuItem1_Click;
             // 
@@ -188,7 +188,7 @@
             sUPLIDORToolStripMenuItem.IconColor = Color.Black;
             sUPLIDORToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             sUPLIDORToolStripMenuItem.Name = "sUPLIDORToolStripMenuItem";
-            sUPLIDORToolStripMenuItem.Size = new Size(224, 26);
+            sUPLIDORToolStripMenuItem.Size = new Size(172, 26);
             sUPLIDORToolStripMenuItem.Text = "SUPLIDOR";
             sUPLIDORToolStripMenuItem.Click += sUPLIDORToolStripMenuItem_Click;
             // 
@@ -210,8 +210,9 @@
             aCERCADEToolStripMenuItem.IconColor = Color.Black;
             aCERCADEToolStripMenuItem.IconFont = FontAwesome.Sharp.IconFont.Auto;
             aCERCADEToolStripMenuItem.Name = "aCERCADEToolStripMenuItem";
-            aCERCADEToolStripMenuItem.Size = new Size(174, 26);
+            aCERCADEToolStripMenuItem.Size = new Size(224, 26);
             aCERCADEToolStripMenuItem.Text = "ACERCA DE ";
+            aCERCADEToolStripMenuItem.Click += aCERCADEToolStripMenuItem_Click;
             // 
             // pictureBox1
             // 
@@ -227,7 +228,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(255, 192, 128);
-            ClientSize = new Size(1246, 450);
+            ClientSize = new Size(1512, 450);
             ControlBox = false;
             Controls.Add(pictureBox1);
             Controls.Add(btncerrar);
