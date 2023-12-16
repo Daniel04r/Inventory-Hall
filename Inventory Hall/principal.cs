@@ -54,5 +54,11 @@ namespace Inventory_Hall
             distribucioncategoria distribucioncategoria = new distribucioncategoria();
             distribucioncategoria.Show();
         }
+
+        private void pRODUCTOToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            consultaproducto consultaproducto = new consultaproducto();
+            consultaproducto.Show();
+        }
     }
 }
