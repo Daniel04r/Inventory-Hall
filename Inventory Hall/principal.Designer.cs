@@ -145,6 +145,7 @@
             dISTRIBUCIÓNDEARTICULOSToolStripMenuItem.Name = "dISTRIBUCIÓNDEARTICULOSToolStripMenuItem";
             dISTRIBUCIÓNDEARTICULOSToolStripMenuItem.Size = new Size(291, 26);
             dISTRIBUCIÓNDEARTICULOSToolStripMenuItem.Text = "DISTRIBUCIÓN DE ARTICULOS";
+            dISTRIBUCIÓNDEARTICULOSToolStripMenuItem.Click += dISTRIBUCIÓNDEARTICULOSToolStripMenuItem_Click;
             // 
             // cONSULTASToolStripMenuItem
             // 
